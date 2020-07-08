@@ -3,11 +3,11 @@
     box-sizing: border-box;
 }
 :root{
-    --color-1: rgba(3, 72, 114, 1) ;
-    --color-2: rgba(1, 40, 63, 1) ;
-    --color-3: rgba(3, 149, 165, 1) ;
-    --color-4: rgba(3, 191, 156, 1) ;
-    --color-5: rgba(4, 216, 138, 1) ;
+    --color-1: #f0ece3 ;
+    --color-2: #dfd3c3 ;
+    --color-3: #c7b198 ;
+    --color-4: #596e79 ;
+    --color-5: #0c5158 ;
 }
 #app {
     display:flex;
