@@ -39,9 +39,8 @@ async def download_file(url, dest):
 
 
 async def setup_learner():
-    await download_file(export_file_url, path / export_file_name)
     try:
-        learn = load_learner(path, export_file_name)
+        learn = load_learner('', export_file_name)
         return learn
     except RuntimeError as e:
         if len(e.args) > 0 and 'CPU-only machine' in e.args[0]:
@@ -78,9 +77,7 @@ async def analyze(request):
 
     prediction = learn.predict(img)[2]
 
-    bests = sorted_prob(classes, prediction)
-
-    return JSONResponse({'result': str(bests)})
+    return JSONResponse({'result': str(prediction[0])})
 
 @app.route('/randoms', methods=['GET'])
 async def randoms(request):
